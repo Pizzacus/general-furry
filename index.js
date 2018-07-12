@@ -289,7 +289,7 @@ client.login(BOT_TOKEN).then(async () => {
 	let currentWebhook = 0;
 
 	client.on('message', message => {
-		if (message.channel.id === SOURCE_CHANNEL) {
+		if (message.channel.id !== SOURCE_CHANNEL) {
 			return;
 		}
 
