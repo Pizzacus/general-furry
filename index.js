@@ -262,7 +262,7 @@ client.login(BOT_TOKEN).then(async () => {
 		// until it gets an error indicating the channel is full
 		(async () => {
 			try {
-				while (webhooks.size < 100) { // In case we ever get unlimited WebHooks ^-^
+				while (webhooks.length < 100) { // In case we ever get unlimited WebHooks ^-^
 					const newWebhook = await targetChannel.createWebhook('furry');
 
 					console.log(`Created new WebHook ${newWebhook.id}`);
